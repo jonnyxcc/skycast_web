@@ -1,0 +1,52 @@
+<div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          		{{#if success_msg}}
+          			<div class="alert alert-success">{{success_msg}}</div>
+          		{{/if}}
+          		{{#if error_msg}}
+          			<div class="alert alert-danger">{{error_msg}}</div>
+          		{{/if}}
+          		{{#if error}}
+          			<div class="alert alert-danger">{{error}}</div>
+          		{{/if}}
+Weather Report:<br>
+{{gResponse.daily.summary}}<br>
+          <div class="col-md-12">
+            <h2>Sunday</h2>
+            <p>{{day1.summary}}</p>
+            <p>A low of {{day1.temperatureMin}} and a high of {{day1.temperatureMax}}</p>
+          </div>
+          <div class="col-md-12">
+            <h2>Monday</h2>
+            <p>{{day2.summary}}</p>
+            <p>A low of {{day2.temperatureMin}} and a high of {{day2.temperatureMax}}</p>
+          </div>
+          <div class="col-md-12">
+            <h2>Tuesday</h2>
+            <p>{{day3.summary}}</p>
+            <p>A low of {{day3.temperatureMin}} and a high of {{day3.temperatureMax}}</p>
+          </div>
+          <div class="col-md-12">
+            <h2>Wednesday</h2>
+            <p>{{day4.summary}}</p>
+            <p>A low of {{day4.temperatureMin}} and a high of {{day4.temperatureMax}}</p>
+          </div>
+          <div class="col-md-12">
+            <h2>Thursday</h2>
+            <p>{{day5.summary}}</p>
+            <p>A low of {{day5.temperatureMin}} and a high of {{day5.temperatureMax}}</p>
+          </div>
+          <div class="col-md-12">
+            <h2>Friday</h2>
+            <p>{{day6.summary}}</p>
+            <p>A low of {{day6.temperatureMin}} and a high of {{day6.temperatureMax}}</p>
+          </div>
+          <div class="col-md-12">
+            <h2>Saturday</h2>
+            <p>{{day7.summary}}</p>
+            <p>A low of {{day7.temperatureMin}} and a high of {{day7.temperatureMax}}</p>
+          </div>
+
+
+

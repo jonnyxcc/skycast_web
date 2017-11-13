@@ -1,0 +1,30 @@
+{
+  "name": "skycast",
+  "version": "1.0.0",
+  "description": "Skycast website app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies":{
+    "axios":"*",
+  	"bcryptjs":"*",
+  	"body-parser":"*",
+  	"connect-flash":"*",
+  	"cookie-parser":"^1.4.1",
+    "dotenv":"*",
+  	"express":"*",
+  	"express-handlebars":"*",
+  	"express-messages":"*",
+  	"express-session":"*",
+  	"express-validator":"*",
+    "geocoder":"*",
+  	"mongodb":"*",
+  	"mongoose":"*",
+  	"passport":"*",
+  	"passport-http":"*",
+  	"passport-local":"*"
+  },
+  "author": "Jonathan Rakushin",
+  "license": "ISC"
+}

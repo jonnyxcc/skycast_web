@@ -1,0 +1,37 @@
+<div class="container">
+	<div class="row">
+	<div class="col-md-12">
+	{{#if success_msg}}
+		<div class="alert alert-success">{{success_msg}}</div>
+	{{/if}}
+	{{#if error_msg}}
+		<div class="alert alert-danger">{{error_msg}}</div>
+	{{/if}}
+	{{#if error}}
+		<div class="alert alert-danger">{{error}}</div>
+	{{/if}}
+	{{#if user}}
+		<h2 class="page-header">Dashboad</h2>
+		<p>Welcome to your dashboard, {{user.name}}. Enter a location to see your weekly forceast, or enter a location and a date to see forecast data for that location and date.</p>
+	<form method="post" action="/">
+		<div class="form-group">
+			<label>City</label>
+			<input type="text" class="form-control" placeholder="City"
+			name="city">
+		</div>
+		<div class="form-group">
+			<label>From</label>
+			<input type="date" class="form-control"
+			placeholder="mm/dd/yy" name="start">
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+		{{#if errors}}
+			{{#each errors}}
+				<div class="alert alert-danger">{{msg}}</div>
+			{{/each}}
+		{{/if}}
+		</form>
+	{{/if}}
+</div> 
+
+

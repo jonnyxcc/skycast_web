@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SkycastApp</title>
+	<link rel="stylesheet" href="/css/bootstrap.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+</head>
+<script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/">SkyCast Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          {{#if user}}  
+          <li class="nav-item">
+            <a class="nav-link active">{{user.name}}</a>
+          </li>
+          {{/if}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actions</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+           	  {{#if user}}
+              <a class="dropdown-item" href="/users/logout">Logout</a>
+              {{else}}
+              <a class="dropdown-item" href="/users/register">Register</a>
+              <a class="dropdown-item" href="/users/login">Sign In</a>
+              {{/if}}
+            </div>
+          </li>
+        </ul>
+        <!-- could add later 
+            <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>-->
+      </div>
+    </nav>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      {{#if user}}
+      {{else}}
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">SkyCast Weather</h1>
+          <p>The leading source for weather from any area. Login or register today for your weather report.</p>
+          <p><a class="btn btn-primary btn-lg" href="/users/login" role="button">Sign In &raquo;</a></p>
+          <p><a class="btn btn-primary btn-lg" href="/users/register" role="button">Register &raquo;</a></p>
+        </div>
+      </div>
+      {{/if}}
+
+
+     <!-- <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          		{{#if success_msg}}
+          			<div class="alert alert-success">{{success_msg}}</div>
+          		{{/if}}
+          		{{#if error_msg}}
+          			<div class="alert alert-danger">{{error_msg}}</div>
+          		{{/if}}
+          		{{#if error}}
+          			<div class="alert alert-danger">{{error}}</div>
+          		{{/if}}
+          		{{{body}}}
+          </div> -->
+
+              {{{body}}}
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+    <footer class="container">
+      <p>&copy; SkyCast Inc., 2017</p>
+    </footer>
+</body>
+</html>

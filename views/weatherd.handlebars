@@ -1,0 +1,18 @@
+<div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          		{{#if success_msg}}
+          			<div class="alert alert-success">{{success_msg}}</div>
+          		{{/if}}
+          		{{#if error_msg}}
+          			<div class="alert alert-danger">{{error_msg}}</div>
+          		{{/if}}
+          		{{#if error}}
+          			<div class="alert alert-danger">{{error}}</div>
+          		{{/if}}
+Weather Report for specified date<br>
+          <div class="col-md-12">
+            <h2>The weather on this date is:</h2>
+            <p>{{day1.summary}}</p>
+            <p>A low of {{day1.temperatureMin}} and a high of {{day1.temperatureMax}}</p>
+          </div>
