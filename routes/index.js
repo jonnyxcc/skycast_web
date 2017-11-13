@@ -6,7 +6,7 @@ var https = require('https');
 var router = express.Router();
 
 var axiosForecast = axios.create({
-	baseURL: 'https://api.darksky.net/forecast/6389477a27592f7e7c8fd1aeb90f94e5'
+	baseURL: 'https://api.darksky.net/forecast/[YOUR_API_KEY]'
 });
 
 var gResponse;
