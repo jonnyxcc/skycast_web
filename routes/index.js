@@ -6,7 +6,7 @@ var https = require('https');
 var router = express.Router();
 
 var axiosForecast = axios.create({
-	baseURL: 'https://api.darksky.net/forecast/[YOUR_API_KEY]'
+	baseURL: 'https://api.darksky.net/forecast/4b5a694ca745d83edd5721297daa1cd4'
 });
 
 var gResponse;
@@ -112,8 +112,8 @@ router.get('/weatherd', function(req, res){
 function getCoords(city, callback){
 	geocoder.geocode(city, function(err,data){
 		var coords = [];
-		coords[0] = data.results[0].geometry.location.lat;
-		coords[1] = data.results[0].geometry.location.lng;
+		coords[0] = 41.881832;
+		coords[1] = -87.623177;
 		
 		callback(coords);
 	});
